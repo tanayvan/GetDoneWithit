@@ -9,11 +9,11 @@ import {
 } from "react-native";
 import Colors from "../../Config/Colors";
 
-const ListItem = ({ image, title, subTitle, onPress, ImageComponent }) => {
+const ListItem = ({ image, title, subTitle, onPress, IconComponent }) => {
   return (
     <TouchableHighlight underlayColor={Colors.light} onPress={onPress}>
       <View style={styles.container}>
-        {ImageComponent}
+        {IconComponent}
         {image && <Image source={image} style={styles.image}></Image>}
         <View style={styles.detailContainer}>
           <Text style={styles.title}>{title}</Text>
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     padding: 15,
+    backgroundColor: Colors.white,
   },
   detailContainer: {
     marginLeft: 10,
